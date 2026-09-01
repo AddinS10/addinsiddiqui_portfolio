@@ -172,6 +172,14 @@
   .card ul li::marker{color:var(--teal);}
   .card-tags{display:flex; gap:6px; flex-wrap:wrap; margin-top:auto; padding-top:6px;}
   .tag{font-family:'IBM Plex Mono', monospace; font-size:11px; color:var(--muted); border:1px solid var(--line); padding:3px 8px; border-radius:6px;}
+  .card-link{
+    display:inline-flex; align-items:center; gap:6px;
+    font-family:'IBM Plex Mono', monospace; font-size:12.5px; font-weight:600;
+    color:var(--teal); text-decoration:none; width:fit-content;
+    border-bottom:1px solid rgba(79,209,197,0.4); padding-bottom:2px;
+    transition:color .2s ease, border-color .2s ease;
+  }
+  .card-link:hover{color:var(--amber); border-color:var(--amber);}
 
   /* ---------- EXPERIENCE ---------- */
   .timeline{position:relative; padding-left:26px; border-left:1px solid var(--line);}
@@ -377,6 +385,9 @@
           <div class="card-tags">
             <span class="tag">Pub/Sub</span><span class="tag">Cloud Functions</span><span class="tag">BigQuery</span><span class="tag">Airflow</span><span class="tag">Looker Studio</span>
           </div>
+          <a class="card-link" href="https://github.com/AddinS10/iot-pipeline-project/blob/main/README.md" target="_blank" rel="noopener noreferrer">
+            View on GitHub ↗
+          </a>
         </div>
 
         <div class="card">
@@ -392,6 +403,9 @@
           <div class="card-tags">
             <span class="tag">PySpark</span><span class="tag">Dataproc</span><span class="tag">BigQuery</span><span class="tag">Airflow</span>
           </div>
+          <a class="card-link" href="https://github.com/AddinS10/rcm-project/blob/main/HEALTHCARE_REVENUE_ANALYSIS_README.md" target="_blank" rel="noopener noreferrer">
+            View on GitHub ↗
+          </a>
         </div>
 
         <div class="card">
