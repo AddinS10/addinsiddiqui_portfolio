@@ -496,6 +496,29 @@
         <div class="section-rule"></div>
       </div>
       <div class="cert-grid">
+
+        <div class="cert-card">
+          <div class="cert-thumb" onclick="openLightbox('assets/certificate-tata-genai.jpg', 'GenAI Powered Data Analytics Job Simulation — Tata, via Forage')">
+            <img src="assets/certificate-tata-genai.jpg" alt="GenAI Powered Data Analytics Job Simulation — Tata, via Forage" loading="lazy">
+          </div>
+          <div class="cert-info">
+            <div class="cert-title">GenAI Powered Data Analytics Job Simulation</div>
+            <div class="cert-meta">Tata · via Forage</div>
+          </div>
+          <div class="cert-date">Sep 2026</div>
+        </div>
+
+        <div class="cert-card">
+          <div class="cert-thumb" onclick="openLightbox('assets/certificate-deloitte.jpg', 'Data Analytics Job Simulation — Deloitte, via Forage')">
+            <img src="assets/certificate-deloitte.jpg" alt="Data Analytics Job Simulation — Deloitte, via Forage" loading="lazy">
+          </div>
+          <div class="cert-info">
+            <div class="cert-title">Data Analytics Job Simulation</div>
+            <div class="cert-meta">Deloitte · via Forage</div>
+          </div>
+          <div class="cert-date">Sep 2026</div>
+        </div>
+
         <div class="cert-card">
           <div class="cert-thumb" onclick="openLightbox()">
             <img src="assets/certificate-data-engineering.jpg" alt="Certificate of Appreciation — Data Engineering Program, AVD Group" loading="lazy">
@@ -506,13 +529,25 @@
           </div>
           <div class="cert-date">Feb 2026</div>
         </div>
+
+        <div class="cert-card">
+          <div class="cert-thumb" onclick="openLightbox('assets/certificate-digital-roots.jpg', 'Certificate of Achievement — Python Fundamentals, Digital Roots Academy')">
+            <img src="assets/certificate-digital-roots.jpg" alt="Certificate of Achievement — Python Fundamentals, Digital Roots Academy" loading="lazy">
+          </div>
+          <div class="cert-info">
+            <div class="cert-title">Certificate of Achievement — Python Fundamentals</div>
+            <div class="cert-meta">Digital Roots Academy · Cert ID DRA-2022-PY-0417</div>
+          </div>
+          <div class="cert-date">Jun 2022</div>
+        </div>
+
       </div>
     </div>
   </section>
 
   <div class="lightbox" id="lightbox" onclick="closeLightbox(event)">
     <button class="lightbox-close" aria-label="Close" onclick="closeLightbox(event)">✕</button>
-    <img src="assets/certificate-data-engineering.jpg" alt="Certificate of Appreciation — Data Engineering Program, AVD Group">
+    <img id="lightbox-img" src="assets/certificate-data-engineering.jpg" alt="Certificate of Appreciation — Data Engineering Program, AVD Group">
   </div>
 
   <section class="section" id="education">
@@ -561,7 +596,12 @@
 <script>
   document.getElementById('year').textContent = new Date().getFullYear();
 
-  function openLightbox(){
+  function openLightbox(src, alt){
+    var img = document.getElementById('lightbox-img');
+    if(src){
+      img.src = src;
+      img.alt = alt || '';
+    }
     document.getElementById('lightbox').classList.add('open');
     document.body.style.overflow = 'hidden';
   }
